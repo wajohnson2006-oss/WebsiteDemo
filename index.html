@@ -490,28 +490,28 @@
       </div>
 
       <!-- Contact form -->
-      <form style="background:#ffffff; border:1px solid #E0E0D8; border-radius:12px; padding:40px 36px; text-align:left; box-shadow:0 4px 16px rgba(18,20,20,0.06);"
+      <form id="estimate-form" style="background:#ffffff; border:1px solid #E0E0D8; border-radius:12px; padding:40px 36px; text-align:left; box-shadow:0 4px 16px rgba(18,20,20,0.06);"
         onsubmit="handleForm(event)">
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;" class="sm:grid-cols-2">
           <div>
             <label style="display:block; font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.8rem; color:#121414; margin-bottom:6px;">First Name</label>
-            <input type="text" placeholder="John" required style="width:100%; border:1px solid #D2D3C9; border-radius:6px; padding:12px 14px; font-family:'Open Sans',sans-serif; font-size:0.9rem; color:#121414; outline:none; transition:border-color 0.2s;"
+            <input type="text" name="firstName" placeholder="John" required style="width:100%; border:1px solid #D2D3C9; border-radius:6px; padding:12px 14px; font-family:'Open Sans',sans-serif; font-size:0.9rem; color:#121414; outline:none; transition:border-color 0.2s;"
               onfocus="this.style.borderColor='#C9A35A'" onblur="this.style.borderColor='#D2D3C9'">
           </div>
           <div>
             <label style="display:block; font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.8rem; color:#121414; margin-bottom:6px;">Last Name</label>
-            <input type="text" placeholder="Smith" required style="width:100%; border:1px solid #D2D3C9; border-radius:6px; padding:12px 14px; font-family:'Open Sans',sans-serif; font-size:0.9rem; color:#121414; outline:none; transition:border-color 0.2s;"
+            <input type="text" name="lastName" placeholder="Smith" required style="width:100%; border:1px solid #D2D3C9; border-radius:6px; padding:12px 14px; font-family:'Open Sans',sans-serif; font-size:0.9rem; color:#121414; outline:none; transition:border-color 0.2s;"
               onfocus="this.style.borderColor='#C9A35A'" onblur="this.style.borderColor='#D2D3C9'">
           </div>
         </div>
         <div style="margin-bottom:16px;">
           <label style="display:block; font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.8rem; color:#121414; margin-bottom:6px;">Phone Number</label>
-          <input type="tel" placeholder="(507) 000-0000" required style="width:100%; border:1px solid #D2D3C9; border-radius:6px; padding:12px 14px; font-family:'Open Sans',sans-serif; font-size:0.9rem; color:#121414; outline:none; transition:border-color 0.2s;"
+          <input type="tel" name="phone" placeholder="(507) 000-0000" required style="width:100%; border:1px solid #D2D3C9; border-radius:6px; padding:12px 14px; font-family:'Open Sans',sans-serif; font-size:0.9rem; color:#121414; outline:none; transition:border-color 0.2s;"
             onfocus="this.style.borderColor='#C9A35A'" onblur="this.style.borderColor='#D2D3C9'">
         </div>
         <div style="margin-bottom:16px;">
           <label style="display:block; font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.8rem; color:#121414; margin-bottom:6px;">Service Needed</label>
-          <select required style="width:100%; border:1px solid #D2D3C9; border-radius:6px; padding:12px 14px; font-family:'Open Sans',sans-serif; font-size:0.9rem; color:#121414; background:#ffffff; outline:none; transition:border-color 0.2s;"
+          <select name="service" required style="width:100%; border:1px solid #D2D3C9; border-radius:6px; padding:12px 14px; font-family:'Open Sans',sans-serif; font-size:0.9rem; color:#121414; background:#ffffff; outline:none; transition:border-color 0.2s;"
             onfocus="this.style.borderColor='#C9A35A'" onblur="this.style.borderColor='#D2D3C9'">
             <option value="">Select a service...</option>
             <option>Residential Roofing</option>
@@ -526,10 +526,10 @@
         </div>
         <div style="margin-bottom:24px;">
           <label style="display:block; font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.8rem; color:#121414; margin-bottom:6px;">Message (Optional)</label>
-          <textarea rows="4" placeholder="Tell us about your project..." style="width:100%; border:1px solid #D2D3C9; border-radius:6px; padding:12px 14px; font-family:'Open Sans',sans-serif; font-size:0.9rem; color:#121414; resize:vertical; outline:none; transition:border-color 0.2s;"
+          <textarea name="message" rows="4" placeholder="Tell us about your project..." style="width:100%; border:1px solid #D2D3C9; border-radius:6px; padding:12px 14px; font-family:'Open Sans',sans-serif; font-size:0.9rem; color:#121414; resize:vertical; outline:none; transition:border-color 0.2s;"
             onfocus="this.style.borderColor='#C9A35A'" onblur="this.style.borderColor='#D2D3C9'"></textarea>
         </div>
-        <button type="submit" class="btn-gold" style="width:100%; text-align:center; border:none; cursor:pointer; font-size:0.9rem;">REQUEST FREE ESTIMATE</button>
+        <button type="submit" id="submit-btn" class="btn-gold" style="width:100%; text-align:center; border:none; cursor:pointer; font-size:0.9rem;">REQUEST FREE ESTIMATE</button>
       </form>
     </div>
   </section>
@@ -584,13 +584,45 @@
   </footer>
 
   <script>
-    function handleForm(e) {
+    // ── Paste your Google Apps Script Web App URL here after deploying ──
+    const SCRIPT_URL = 'PASTE_YOUR_SCRIPT_URL_HERE';
+
+    async function handleForm(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      btn.textContent = 'THANK YOU! WE\'LL BE IN TOUCH.';
-      btn.style.background = '#182144';
-      btn.style.color = '#C9A35A';
-      btn.disabled = true;
+      const form = e.target;
+      const btn  = document.getElementById('submit-btn');
+
+      btn.textContent = 'SENDING...';
+      btn.disabled    = true;
+      btn.style.opacity = '0.7';
+
+      const params = new URLSearchParams({
+        firstName: form.firstName.value,
+        lastName:  form.lastName.value,
+        phone:     form.phone.value,
+        service:   form.service.value,
+        message:   form.message.value,
+      });
+
+      try {
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode:   'no-cors',   // required for Apps Script
+          body:   params,
+        });
+        // no-cors means we can't read the response — assume success
+        btn.textContent      = "THANK YOU! WE'LL BE IN TOUCH.";
+        btn.style.background = '#182144';
+        btn.style.color      = '#C9A35A';
+        btn.style.opacity    = '1';
+        form.reset();
+      } catch (err) {
+        btn.textContent      = 'ERROR — PLEASE CALL US DIRECTLY';
+        btn.style.background = '#8B1A1A';
+        btn.style.color      = '#ffffff';
+        btn.style.opacity    = '1';
+        btn.disabled         = false;
+      }
     }
   </script>
 
