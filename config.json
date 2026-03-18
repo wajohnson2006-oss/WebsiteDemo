@@ -1,0 +1,41 @@
+{
+  "seo": {
+    "title": "Platinum Roofing and Construction – Trust the experts at 4D Companies, LLC with Platinum Roofing and Siding for all your roofing and home construction needs. – Rochester"
+  },
+  "company": {
+    "name": "Platinum Roofing and Construction",
+    "tagline": "Trust the experts at 4D Companies, LLC with Platinum Roofing and Siding for all your roofing and home construction needs.",
+    "city": "Rochester",
+    "province": "Minnesota",
+    "region": "Rochester Area",
+    "address": "\u0016\u0016525 Industrial Dr SE, Elgin, MN 55932",
+    "phone": "(507)871-3040",
+    "email": "info@4dcompaniesllc.com",
+    "yearsInBusiness": "16",
+    "since": "2010",
+    "roofsCompleted": "100",
+    "copyrightYear": "2026",
+    "footerRegion": "\u0016Elgin, Kellogg, Rochester, Allamakee, Black Hawk, Bremer, Butler, Cerro Gordo, Clayton, Eyota, Plainview, Zumbro Falls, Benton, Boone, Buchanan, Cedar, Chickasaw, Dallas"
+  },
+  "hero": {
+    "tag": "Rochester's #1 Trust the experts at 4D Companies, LLC with Platinum Roofing and Siding for all your roofing and home construction needs. Company"
+  },
+  "reviews": {
+    "rating": "4.9",
+    "count": "200+"
+  },
+  "services": {
+    "html": "<li><a href=\"#\">Full service construction services</a></li>\n          <li><a href=\"#\">from development and foundations to framing</a></li>\n          <li><a href=\"#\">roofing</a></li>\n          <li><a href=\"#\">siding</a></li>\n          <li><a href=\"#\">doors</a></li>\n          <li><a href=\"#\">and windows.</a></li>"
+  },
+  "colors": {
+    "bark": "#997930",
+    "green": "#D4A843",
+    "amber": "\u0016#2E6DB4",
+    "amberDark": "#NaNb3ab",
+    "sand": "#C4A882",
+    "parchment": "#F5F0E8",
+    "dark": "#1E1E1E",
+    "mid": "#2D2D2D",
+    "textGray": "#717171"
+  }
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Platinum Roofing and Construction – Trust the experts at 4D Companies, LLC with Platinum Roofing and Siding for all your roofing and home construction needs. – Rochester</title>
+  <title>{{seo.title}}</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,15 +12,15 @@
   <style>
     /* ── Brand colours ─────────────────────────────────────────── */
     :root {
-      --bark:      #997930;
-      --green:     #D4A843;
-      --amber:     #2E6DB4;
-      --amber-dk:  #NaNb3ab;
-      --sand:      #C4A882;
-      --parch:     #F5F0E8;
-      --dark:      #1E1E1E;
-      --mid:       #2D2D2D;
-      --text-gray: #717171;
+      --bark:      {{colors.bark}};
+      --green:     {{colors.green}};
+      --amber:     {{colors.amber}};
+      --amber-dk:  {{colors.amberDark}};
+      --sand:      {{colors.sand}};
+      --parch:     {{colors.parchment}};
+      --dark:      {{colors.dark}};
+      --mid:       {{colors.mid}};
+      --text-gray: {{colors.textGray}};
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -149,8 +149,8 @@
       display: flex;
       align-items: center;
       gap: 7px;
-      background: rgba(165,165,165,0.07);
-      border: 1px solid rgba(165,165,165,0.12);
+      background: rgba({{company.yearsInBusiness}}5,{{company.yearsInBusiness}}5,{{company.yearsInBusiness}}5,0.07);
+      border: 1px solid rgba({{company.yearsInBusiness}}5,{{company.yearsInBusiness}}5,{{company.yearsInBusiness}}5,0.12);
       padding: 8px 14px;
       color: #ddd;
       font-size: 12px;
@@ -487,7 +487,7 @@
     }
     #warranty .section-label { color: var(--sand); }
     #warranty .section-title { color: #fff; margin-bottom: 16px; }
-    #warranty p { color: rgba(165,165,165,0.8); font-size: 16px; max-width: 600px; margin: 0 auto 32px; }
+    #warranty p { color: rgba({{company.yearsInBusiness}}5,{{company.yearsInBusiness}}5,{{company.yearsInBusiness}}5,0.8); font-size: 16px; max-width: 600px; margin: 0 auto 32px; }
     .warranty-num {
       font-size: clamp(72px, 10vw, 120px);
       font-weight: 900;
@@ -593,14 +593,14 @@
 <nav id="navbar">
   <a href="#" class="nav-logo">
     <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="46" height="46" fill="#2E6DB4" rx="2"/>
+      <rect width="46" height="46" fill="{{colors.amber}}" rx="2"/>
       <polygon points="23,6 40,20 6,20" fill="#fff" opacity="0.9"/>
       <rect x="10" y="20" width="26" height="18" fill="#fff" opacity="0.85"/>
-      <rect x="18" y="26" width="10" height="12" fill="#2E6DB4"/>
+      <rect x="18" y="26" width="10" height="12" fill="{{colors.amber}}"/>
     </svg>
     <span class="nav-logo-text">
-      <span class="brand-main">Platinum Roofing and Construction</span>
-      <span class="brand-sub">Trust the experts at 4D Companies, LLC with Platinum Roofing and Siding for all your roofing and home construction needs.</span>
+      <span class="brand-main">{{company.name}}</span>
+      <span class="brand-sub">{{company.tagline}}</span>
     </span>
   </a>
 
@@ -610,7 +610,7 @@
     <a href="#colors">Colors</a>
     <a href="#why-metal">Why Metal</a>
     <a href="#financing">Financing</a>
-    <span class="nav-phone">&#128222; (507)871-3040</span>
+    <span class="nav-phone">&#128222; {{company.phone}}</span>
     <button class="btn-nav" onclick="document.querySelector('.quote-form').scrollIntoView({behavior:'smooth'})">Get Free Quote</button>
   </div>
 </nav>
@@ -621,10 +621,10 @@
   <div class="overlay"></div>
   <div class="inner">
     <div class="hero-copy">
-      <div class="tag">Rochester's #1 Trust the experts at 4D Companies, LLC with Platinum Roofing and Siding for all your roofing and home construction needs. Company</div>
+      <div class="tag">{{hero.tag}}</div>
       <h1>Get Your<br /><span>Free Quote</span><br />Today!</h1>
       <p>
-        Serving Rochester and all Rochester Area. 16+ years protecting homes
+        Serving {{company.city}} and all {{company.region}}. {{company.yearsInBusiness}}+ years protecting homes
         with premium steel roofing. Quality materials, honest pricing, work that lasts.
       </p>
       <div class="hero-badges">
@@ -712,15 +712,15 @@
     </div>
     <div class="trust-item">
       <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      16+ Years Experience
+      {{company.yearsInBusiness}}+ Years Experience
     </div>
     <div class="trust-item">
       <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
       24/7 Emergency Repairs
     </div>
     <div class="trust-item">
-      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.16L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      100 Roofs Completed
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.{{company.yearsInBusiness}}L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      {{company.roofsCompleted}} Roofs Completed
     </div>
     <div class="trust-item">
       <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
@@ -734,15 +734,15 @@
   <div class="section-inner">
     <div class="about-grid">
       <div class="about-img">
-        <img src="https://placehold.co/600x480/2D2D2D/C8880A?text=Platinum Roofing and Construction+Team" alt="Platinum Roofing and Construction roofing team" />
+        <img src="https://placehold.co/600x480/2D2D2D/C8880A?text={{company.name}}+Team" alt="{{company.name}} roofing team" />
         <div class="about-badge">
-          <span class="num">16</span>
+          <span class="num">{{company.yearsInBusiness}}</span>
           <span class="lbl">Years in Business</span>
         </div>
       </div>
       <div>
-        <p class="section-label">About Platinum Roofing and Construction</p>
-        <h2 class="section-title">Platinum Roofing and Construction <span>Trust the experts at 4D Companies, LLC with Platinum Roofing and Siding for all your roofing and home construction needs.</span> Masters</h2>
+        <p class="section-label">About {{company.name}}</p>
+        <h2 class="section-title">{{company.name}} <span>{{company.tagline}}</span> Masters</h2>
         <p style="font-size:22px;font-weight:700;color:#333;margin:0 0 12px;font-style:italic;line-height:1.4;">
           "Licensed. Insured. Trusted."
         </p>
@@ -750,18 +750,18 @@
           Free Estimates &middot; 24/7 Emergency Repairs
         </p>
         <p>
-          We've been protecting homes and businesses across the Maritimes for over 16 years.
-          Quality materials, honest pricing, and work that truly lasts &mdash; that's the Platinum Roofing and Construction
+          We've been protecting homes and businesses across the Maritimes for over {{company.yearsInBusiness}} years.
+          Quality materials, honest pricing, and work that truly lasts &mdash; that's the {{company.name}}
           promise. Local and family-owned, we treat every roof like it's our own.
         </p>
         <ul class="about-list">
-          <li>Licensed &amp; Insured in Minnesota</li>
+          <li>Licensed &amp; Insured in {{company.province}}</li>
           <li>BBB A+ License Badge</li>
           <li>Industry-leading 50-Year Material Warranty</li>
           <li>5-Year Workmanship Guarantee</li>
           <li>100% of Roofs Completed on Schedule</li>
           <li>Payment Options Shown Upfront</li>
-          <li>Serving All Rochester Area</li>
+          <li>Serving All {{company.region}}</li>
         </ul>
         <div class="cta-pair">
           <button class="btn-primary" onclick="document.querySelector('.quote-form').scrollIntoView({behavior:'smooth'})">Get Free Estimate</button>
@@ -779,10 +779,10 @@
     <h2 class="section-title" style="text-align:center;">Our Customers <span>Love Us,</span> and It Shows</h2>
 
     <div class="rating-summary" style="justify-content:center;margin-bottom:48px;">
-      <div class="rating-big">4.9</div>
+      <div class="rating-big">{{reviews.rating}}</div>
       <div class="rating-meta">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div>Based on 200+ Google Reviews</div>
+        <div>Based on {{reviews.count}} Google Reviews</div>
       </div>
     </div>
 
@@ -791,7 +791,7 @@
         <div class="review-source">Google</div>
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="review-text">
-          "Platinum Roofing and Construction completely transformed our home. The new steel roof looks incredible and the crew were
+          "{{company.name}} completely transformed our home. The new steel roof looks incredible and the crew were
           professional from start to finish. Done right &mdash; the first time."
         </p>
         <div class="reviewer">Michael T.</div>
@@ -802,17 +802,17 @@
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="review-text">
           "Called them for an emergency repair after a storm. They were there the same day. Honest
-          assessment, fair pricing. Will be using Platinum Roofing and Construction for our full re-roof next spring."
+          assessment, fair pricing. Will be using {{company.name}} for our full re-roof next spring."
         </p>
         <div class="reviewer">Sandra M.</div>
-        <div class="reviewer-sub">Rochester, NB</div>
+        <div class="reviewer-sub">{{company.city}}, NB</div>
       </div>
       <div class="review-card">
         <div class="review-source">Google</div>
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="review-text">
           "Best investment we made in our home. The metal roof looks amazing and we already noticed a drop
-          in heating bills. Platinum Roofing and Construction's team was respectful, tidy, and fast."
+          in heating bills. {{company.name}}'s team was respectful, tidy, and fast."
         </p>
         <div class="reviewer">Daniel &amp; Claire F.</div>
         <div class="reviewer-sub">Dieppe, NB</div>
@@ -904,7 +904,7 @@
           </div>
           <div>
             <h4>Energy Savings</h4>
-            <p>Reflective coatings reduce cooling costs by up to 16%, cutting your energy bill year-round.</p>
+            <p>Reflective coatings reduce cooling costs by up to {{company.yearsInBusiness}}%, cutting your energy bill year-round.</p>
           </div>
         </div>
         <div class="why-item">
@@ -918,7 +918,7 @@
         </div>
         <div class="why-item">
           <div class="why-icon">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 {{reviews.rating}} 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
           </div>
           <div>
             <h4>Fire Resistant</h4>
@@ -974,9 +974,9 @@
     <div class="adv-grid">
       <div>
         <p class="section-label">What Sets Us Apart</p>
-        <h2 class="section-title">Strong, Beautiful Roofing &mdash; <span>The Platinum Roofing and Construction Steel Advantage</span></h2>
+        <h2 class="section-title">Strong, Beautiful Roofing &mdash; <span>The {{company.name}} Steel Advantage</span></h2>
         <p>
-          Not all steel roofing is created equal. Platinum Roofing and Construction uses premium gauge steel with Kynar 500
+          Not all steel roofing is created equal. {{company.name}} uses premium gauge steel with Kynar 500
           coatings, installed by factory-trained craftsmen who take pride in every detail.
         </p>
         <ul class="adv-list">
@@ -994,7 +994,7 @@
         </div>
       </div>
       <div>
-        <img src="https://placehold.co/580x520/475936/ffffff?text=Steel+Roofing+Install" alt="Platinum Roofing and Construction steel roofing installation" style="width:100%;display:block;" />
+        <img src="https://placehold.co/580x520/475936/ffffff?text=Steel+Roofing+Install" alt="{{company.name}} steel roofing installation" style="width:100%;display:block;" />
       </div>
     </div>
   </div>
@@ -1010,13 +1010,13 @@
         <img src="https://placehold.co/600x450/555555/aaaaaa?text=Before" alt="Before roof replacement" />
         <div class="ba-overlay"></div>
         <div class="ba-label">Before</div>
-        <div class="ba-caption">Worn asphalt shingles &mdash; Rochester home, 2024</div>
+        <div class="ba-caption">Worn asphalt shingles &mdash; {{company.city}} home, 2024</div>
       </div>
       <div class="ba-card">
         <img src="https://placehold.co/600x450/2C2C2C/C8880A?text=After" alt="After steel roof installation" />
         <div class="ba-overlay"></div>
         <div class="ba-label" style="background:var(--green);">After</div>
-        <div class="ba-caption">Charcoal steel standing-seam &mdash; installed by Platinum Roofing and Construction</div>
+        <div class="ba-caption">Charcoal steel standing-seam &mdash; installed by {{company.name}}</div>
       </div>
     </div>
   </div>
@@ -1027,7 +1027,7 @@
   <p class="section-label" style="color:var(--sand);text-align:center;margin-bottom:16px;">The Metal Difference</p>
   <h2>Metal Roof <span>Outlasts</span><br />Everything!</h2>
   <p>
-    Asphalt shingles last 15&ndash;20 years. A steel roof from Platinum Roofing and Construction lasts 50+ years &mdash;
+    Asphalt shingles last 15&ndash;20 years. A steel roof from {{company.name}} lasts 50+ years &mdash;
     meaning you install it once and never worry again.
   </p>
   <button class="btn-primary" style="font-size:15px;padding:16px 40px;"
@@ -1084,7 +1084,7 @@
     <div class="warranty-num">50</div>
     <span class="warranty-year">Year Warranty</span>
     <h2 class="section-title" style="color:#fff;margin-top:16px;text-align:center;">We Stand Behind <span>Every Roof</span> We Install</h2>
-    <p style="color:rgba(165,165,165,0.8);font-size:16px;max-width:600px;margin:0 auto 32px;text-align:center;">
+    <p style="color:rgba({{company.yearsInBusiness}}5,{{company.yearsInBusiness}}5,{{company.yearsInBusiness}}5,0.8);font-size:16px;max-width:600px;margin:0 auto 32px;text-align:center;">
       Our steel roofing products carry a 50-year manufacturer&rsquo;s warranty, backed by our own
       5-year workmanship guarantee. If anything goes wrong, we make it right &mdash; no questions asked.
     </p>
@@ -1102,10 +1102,10 @@
   <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="brand-main">Platinum Roofing and Construction</div>
-        <div class="brand-sub">Trust the experts at 4D Companies, LLC with Platinum Roofing and Siding for all your roofing and home construction needs. Masters</div>
+        <div class="brand-main">{{company.name}}</div>
+        <div class="brand-sub">{{company.tagline}} Masters</div>
         <p>
-          Proudly serving Rochester and all Rochester Area since 2010.
+          Proudly serving {{company.city}} and all {{company.region}} since {{company.since}}.
           Licensed, insured, and dedicated to protecting your home with
           the finest steel roofing available.
         </p>
@@ -1119,12 +1119,7 @@
       <div>
         <div class="footer-heading">Services</div>
         <ul class="footer-links">
-          <li><a href="#">Full service construction services</a></li>
-          <li><a href="#">from development and foundations to framing</a></li>
-          <li><a href="#">roofing</a></li>
-          <li><a href="#">siding</a></li>
-          <li><a href="#">doors</a></li>
-          <li><a href="#">and windows.</a></li>
+          {{services.html}}
         </ul>
       </div>
 
@@ -1144,15 +1139,15 @@
         <div class="footer-heading">Contact Us</div>
         <div class="footer-contact-item">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.38 2 2 0 0 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>(507)871-3040</span>
+          <span>{{company.phone}}</span>
         </div>
         <div class="footer-contact-item">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>info@4dcompaniesllc.com</span>
+          <span>{{company.email}}</span>
         </div>
         <div class="footer-contact-item">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>525 Industrial Dr SE, Elgin, MN 55932<br />Serving all Rochester Area</span>
+          <span>{{company.address}}<br />Serving all {{company.region}}</span>
         </div>
         <div class="footer-contact-item">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -1162,8 +1157,8 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2026 Platinum Roofing and Construction Trust the experts at 4D Companies, LLC with Platinum Roofing and Siding for all your roofing and home construction needs.. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-      <p>Proudly serving Elgin, Kellogg, Rochester, Allamakee, Black Hawk, Bremer, Butler, Cerro Gordo, Clayton, Eyota, Plainview, Zumbro Falls, Benton, Boone, Buchanan, Cedar, Chickasaw, Dallas.</p>
+      <p>&copy; {{company.copyrightYear}} {{company.name}} {{company.tagline}}. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      <p>Proudly serving {{company.footerRegion}}.</p>
     </div>
   </div>
 </footer>
